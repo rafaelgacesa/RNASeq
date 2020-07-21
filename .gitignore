@@ -1,0 +1,7 @@
+/counts
+/lengths
+/norm_counts
+/test_data
+/venv
+/.snakemake
+/.idea
