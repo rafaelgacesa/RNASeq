@@ -4,7 +4,7 @@
 # Created on: 2020-07-13
 library(edgeR, limma)
 
-# method to grab gene lengths from biomaRt (takes a vector of gene_ids and returns a dataframe containing gene_id and lengths)
+# method to grab gene lengths from biomaRt (takes a vector of gene ids and returns a dataframe containing gene_id and lengths)
 getGeneLengths <- function (geneList) {
   if(!file.exists(lengthFilePath)){
     library("biomaRt")
