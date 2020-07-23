@@ -20,11 +20,11 @@ rule all:
 # rule that takes all counts and produces normalized counts by TPM
 rule normalize:
     input:
-         count = 'counts/{file}.txt',
+         counts = 'counts/{file}.txt',
          rFile = 'normalize.R'
     output: 'norm_counts/{file}_norm.txt'
     shell:
         '''
-        echo normalizing {input.count} to create {output}
-        Rscript {input.rFile} {normMethod} {input.count} {output}
+        echo normalizing {input.counts} to create {output}
+        Rscript {input.rFile} {normMethod} {input.counts} {output}
         '''
